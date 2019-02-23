@@ -18,6 +18,16 @@ textarea {
     max-width: 280px;
 }
 
+.navbar-inverse {
+    background-color: #FF5733;
+    color:#FFF;
+}
+    .navbar-inverse .navbar-brand {
+        color: #FFF;
+    }
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFF;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
