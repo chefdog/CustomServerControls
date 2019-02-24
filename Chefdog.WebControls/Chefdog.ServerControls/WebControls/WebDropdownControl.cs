@@ -43,6 +43,10 @@ namespace Chefdog.ServerControls.WebControls
             }
         }
 
+        public override string ClientID {
+            get { return "cfgSelectDropdown"; }
+        }
+
         protected override HtmlTextWriterTag TagKey
         {
             get
@@ -54,6 +58,7 @@ namespace Chefdog.ServerControls.WebControls
         protected override void AddAttributesToRender(HtmlTextWriter writer)
         {
             base.AddAttributesToRender(writer);
+            writer.AddAttribute(HtmlTextWriterAttribute.Id, this.ClientID);
             writer.AddAttribute("data-toggle", DataToggle);
         }
 
@@ -73,10 +78,13 @@ namespace Chefdog.ServerControls.WebControls
 
         protected override void RenderContents(HtmlTextWriter writer)
         {
+            
+
             foreach (WebDropdownItem item in dropdownItems) {
                 if (item.IsSelected) {
                     writer.AddAttribute(HtmlTextWriterAttribute.Selected, "selected");
                 }
+                
                 writer.AddAttribute(HtmlTextWriterAttribute.Value, item.ItemValue);
                 writer.RenderBeginTag(HtmlTextWriterTag.Option);
                 writer.Write(item.ItemText);

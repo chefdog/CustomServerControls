@@ -25,11 +25,11 @@
 	// SelectAutoDropdown STATE
     // ========================
     SelectAutoDropdown.prototype.setState = function (state) {
-        this.$element.css('background-color', '#FFFFFF');
     }
 
     SelectAutoDropdown.prototype.toggle = function () {
-    	this.$element.css('background-color', '#e1f0f2');
+        var selectedOption = this.$element.attr('selectedIndex');
+        __doPostBack(this.$element.attr('id'), selectedOption);
     }
 	
 

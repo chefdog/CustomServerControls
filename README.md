@@ -16,7 +16,9 @@ inline js not to work anymore.
 # 3. The control
 
 3.1. Requirements
-The control renders html that uses bootstrap, jquery
+- ASP.Net 4.6.2 (or higher).
+- jQuery 3.3.1 
+- bootstrap 3.3.7
 
 3.2. 
 

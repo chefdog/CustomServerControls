@@ -11,7 +11,10 @@ namespace Chefdog.WebControls.SampleWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack) {
+                string parameter = Request["__EVENTARGUMENT"];
+                var data = sender;
+            }
         }
     }
 }
