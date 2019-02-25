@@ -27,8 +27,8 @@
     SelectAutoDropdown.prototype.setState = function (state) {
     }
 
-    SelectAutoDropdown.prototype.toggle = function () {
-        var selectedOption = this.$element.attr('selectedIndex');
+    SelectAutoDropdown.prototype.toggle = function () {        
+        var selectedOption = $(this.$element).children("option:selected").val();
         __doPostBack(this.$element.attr('id'), selectedOption);
     }
 	
