@@ -12,14 +12,18 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Example select</label>
-                <cfg:WebDropdownControl runat="server" DataToggle="filter" CssClass="cfg-dropdown-control form-control">
+                <cfg:WebDropdownControl runat="server" DataToggle="filter" CssClass="cfg-dropdown-control form-control" ID="cfgDropdown">
                     <DropdownItems>
                         <cfg:WebDropdownItem ItemValue="Test01" ItemText="Test01"></cfg:WebDropdownItem>
                         <cfg:WebDropdownItem ItemValue="Test02" ItemText="Test02" IsSelected="true"></cfg:WebDropdownItem>
                         <cfg:WebDropdownItem ItemValue="Test03" ItemText="Test03"></cfg:WebDropdownItem>
+                        <cfg:WebDropdownItem ItemValue="Test04" ItemText="Test04"></cfg:WebDropdownItem>
                     </DropdownItems>
                 </cfg:WebDropdownControl>
-            </div>            
+            </div>
+            <div class="form-group">
+                <asp:Button runat="server" Text="submit" />
+            </div>
         </div>
     </div>
 
